@@ -45,20 +45,4 @@ This shows the range depends on **sin(2θ)**, which peaks at 45° for maximum di
 
 ### Python Simulation (Basic Example):
 
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-
-v0 = 20  # initial velocity (m/s)
-g = 9.81  # gravity (m/s²)
-angles = np.linspace(0, 90, 500)
-radians = np.radians(angles)
-
-ranges = (v0**2 * np.sin(2 * radians)) / g
-
-plt.plot(angles, ranges)
-plt.xlabel('Launch Angle (degrees)')
-plt.ylabel('Range (meters)')
-plt.title('Projectile Range vs Launch Angle')
-plt.grid(True)
-plt.show()
+![Range vs Angle](../../_pics/range_vs_angle.png)
