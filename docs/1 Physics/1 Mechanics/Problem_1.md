@@ -45,5 +45,6 @@ This shows the range depends on **sin(2θ)**, which peaks at 45° for maximum di
 
 ### Python Simulation (Basic Example):
 
-![Range vs Angle](_pics/range_vs_angle.png)
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAYAAAA10dzkAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjEsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvc2/+5QAAAAlwSFlzAAAPYQAAD2EBqD+naQAAc5ZJREFUeJzt3QV4FFfbBuAnLoQECSQBEgiuwV2LFijFCnyFFq1QoRSqfFW+CpQKNQqlRUqLtLRIKcXdXYJbSIAkBI0S3/96T9j8SUiQsMnM7jz3dQ2ZFWbPzll598h77EwmkwlEREREZBj2WheAiIiIiAoXA0AiIiIig2EASERERGQwDACJiIiIDIYBIBEREZHBMAAkIiIiMhgGgEREREQGwwCQiIiIyGAYABIREREZDANAIiIiIoNhAEhERERkMAwAiYiIiAyGASARERGRwTAAJCIiIjIYBoBEREREBsMA" width="600">
+
 
