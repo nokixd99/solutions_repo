@@ -120,6 +120,12 @@ Possible extensions:
 - Noise-driven forcing
 - Coupled pendula
 
+### 🔍 Simulation: Angle vs Time
+
+The following graph shows how the angular displacement \( \theta(t) \) evolves over time for a forced damped pendulum under the influence of damping and periodic driving:
+
+![Angle vs Time](https://i.imgur.com/eICeLfy.png)
+
 ---
 
 > _This problem bridges theoretical physics and computational modeling, highlighting how simple equations can lead to complex behavior._
