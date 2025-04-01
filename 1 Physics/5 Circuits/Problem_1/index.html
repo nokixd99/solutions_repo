@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>Problem 1: Equivalent Resistance Using Graph Theory - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "Problem 1: Equivalent Resistance Using Graph Theory";
         var mkdocs_page_input_path = "1 Physics/5 Circuits/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -58,41 +58,61 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_2/">Problem 2: Escape Velocities and Cosmic Velocities</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_3/">Problem 3</a>
+<li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_3/">Problem 3: Trajectories of a Freely Released Payload Near Earth</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">3 Waves</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../3%20Waves/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../3%20Waves/Problem_1/">Problem 1: Interference Patterns on a Water Surface</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">4 Electromagnetism</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../4%20Electromagnetism/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../4%20Electromagnetism/Problem_1/">Problem 1: Simulating the Effects of the Lorentz Force</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">5 Circuits</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1: Equivalent Resistance Using Graph Theory</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">⚡ Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#concept-overview">🧠 Concept Overview</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task-options">🔄 Task Options</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#option-1-algorithm-description">Option 1: Algorithm Description</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#option-2-full-implementation-recommended">Option 2: Full Implementation (Recommended)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deliverables">📦 Deliverables</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#simulation-code">🔧 Simulation &amp; Code</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#visualized-example-circuit">🔌 Visualized Example Circuit</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">6 Statistics</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_1/">Problem 1: Exploring the Central Limit Theorem through Simulations</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_2/">Problem 2</a>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_2/">Problem 2: Estimating \( \pi \) Using Monte Carlo Methods</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">7 Measurements</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../7%20Measurements/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../7%20Measurements/Problem_1/">Problem 1: Measuring Earth’s Gravitational Acceleration with a Pendulum</a>
 </li>
 </ul>
 </li>
@@ -163,7 +183,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">5 Circuits</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">Problem 1: Equivalent Resistance Using Graph Theory</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,12 +191,59 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="problem-1-equivalent-resistance-using-graph-theory">Problem 1: Equivalent Resistance Using Graph Theory</h1>
+<hr/>
+<h2 id="motivation">⚡ Motivation</h2>
+<p>Computing equivalent resistance in electrical circuits is foundational in physics and engineering. Traditional methods based on identifying series and parallel combinations work well for simple circuits, but quickly become inefficient or unclear in complex topologies.</p>
+<p><strong>Graph theory</strong> provides a more flexible and powerful tool:<br/>
+- Nodes = circuit junctions<br/>
+- Edges = resistors with weights (resistance values)<br/>
+- Reduction = combining edges via algorithmic rules</p>
+<p>This method allows us to approach circuits as data structures, simplifying them using logic and algorithms — especially useful in simulation, optimization, and automation.</p>
+<hr/>
+<h2 id="concept-overview">🧠 Concept Overview</h2>
+<p>In a graph-based representation of a circuit:
+- <strong>Series connection</strong> = two edges sharing a node with only two total connections → can be combined linearly
+- <strong>Parallel connection</strong> = multiple edges connecting the same two nodes → combine via reciprocal sum</p>
+<p>Using graph traversal and reduction techniques, we can reduce an entire network to a single equivalent resistor between two nodes.</p>
+<hr/>
+<h2 id="task-options">🔄 Task Options</h2>
+<h3 id="option-1-algorithm-description">Option 1: Algorithm Description</h3>
+<p>Write a pseudocode algorithm that:</p>
+<ul>
+<li>Detects series and parallel resistor patterns</li>
+<li>Iteratively reduces the graph</li>
+<li>Handles nested configurations and updates the structure until a single edge remains</li>
+</ul>
+<h3 id="option-2-full-implementation-recommended">Option 2: Full Implementation (Recommended)</h3>
+<p>Implement a Python script (e.g. with <code>networkx</code>) that:</p>
+<ul>
+<li>Accepts a circuit graph as input</li>
+<li>Supports arbitrary combinations and cycles</li>
+<li>Computes and returns the equivalent resistance</li>
+<li>Includes test cases for:</li>
+<li>Simple series/parallel circuits</li>
+<li>Nested resistor networks</li>
+<li>Multi-loop configurations</li>
+</ul>
+<hr/>
+<h2 id="deliverables">📦 Deliverables</h2>
+<ul>
+<li>Pseudocode or full implementation of the algorithm</li>
+<li>Description of algorithm steps (with examples)</li>
+<li>Output for 3 test circuits of increasing complexity</li>
+<li>Optional: performance notes and ideas for optimization</li>
+</ul>
+<hr/>
+<h2 id="simulation-code">🔧 Simulation &amp; Code</h2>
+<h3 id="visualized-example-circuit">🔌 Visualized Example Circuit</h3>
+<p>The following diagram shows the example circuit graph, with resistors labeled on each edge. Nodes represent junctions in the network, and edges represent resistors:</p>
+<p><img alt="Circuit Diagram" src="https://i.imgur.com/HVZJdAT.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href="../../4%20Electromagnetism/Problem_1/" title="Problem 1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-<a class="btn btn-neutral float-right" href="../../6%20Statistics/Problem_1/" title="Problem 1">Next <span class="icon icon-circle-arrow-right"></span></a>
+<a class="btn btn-neutral float-left" href="../../4%20Electromagnetism/Problem_1/" title="Problem 1: Simulating the Effects of the Lorentz Force"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../../6%20Statistics/Problem_1/" title="Problem 1: Exploring the Central Limit Theorem through Simulations">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>
 <div role="contentinfo">

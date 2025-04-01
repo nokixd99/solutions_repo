@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>Problem 1: Exploring the Central Limit Theorem through Simulations - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "Problem 1: Exploring the Central Limit Theorem through Simulations";
         var mkdocs_page_input_path = "1 Physics/6 Statistics/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -58,41 +58,59 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_2/">Problem 2: Escape Velocities and Cosmic Velocities</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_3/">Problem 3</a>
+<li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_3/">Problem 3: Trajectories of a Freely Released Payload Near Earth</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">3 Waves</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../3%20Waves/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../3%20Waves/Problem_1/">Problem 1: Interference Patterns on a Water Surface</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">4 Electromagnetism</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../4%20Electromagnetism/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../4%20Electromagnetism/Problem_1/">Problem 1: Simulating the Effects of the Lorentz Force</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">5 Circuits</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../5%20Circuits/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20Circuits/Problem_1/">Problem 1: Equivalent Resistance Using Graph Theory</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">6 Statistics</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1: Exploring the Central Limit Theorem through Simulations</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">🎯 Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#theoretical-background">🧠 Theoretical Background</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#simulation-task">🧪 Simulation Task</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#parameter-exploration">🔬 Parameter Exploration</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#practical-applications">📊 Practical Applications</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deliverables">📦 Deliverables</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#python-simulation">💻 Python Simulation</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#sampling-from-a-uniform-distribution">🧪 Sampling from a Uniform Distribution</a>
+</li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2: Estimating \( \pi \) Using Monte Carlo Methods</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">7 Measurements</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../7%20Measurements/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../7%20Measurements/Problem_1/">Problem 1: Measuring Earth’s Gravitational Acceleration with a Pendulum</a>
 </li>
 </ul>
 </li>
@@ -163,7 +181,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">6 Statistics</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">Problem 1: Exploring the Central Limit Theorem through Simulations</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,12 +189,81 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="problem-1-exploring-the-central-limit-theorem-through-simulations">Problem 1: Exploring the Central Limit Theorem through Simulations</h1>
+<hr/>
+<h2 id="motivation">🎯 Motivation</h2>
+<p>The <strong>Central Limit Theorem (CLT)</strong> is a fundamental concept in probability theory and statistics. It states that the distribution of the sample mean of a sufficiently large number of independent, identically distributed random variables approaches a normal distribution, regardless of the population’s original distribution.</p>
+<p>This principle is essential in:
+- Estimating population parameters<br/>
+- Statistical inference<br/>
+- Quality control<br/>
+- Finance and engineering applications  </p>
+<hr/>
+<h2 id="theoretical-background">🧠 Theoretical Background</h2>
+<p>CLT states that if <span class="arithmatex">\( X_1, X_2, ..., X_n \)</span> are i.i.d. random variables with mean <span class="arithmatex">\( \mu \)</span> and variance <span class="arithmatex">\( \sigma^2 \)</span>, then:</p>
+<div class="arithmatex">\[
+\bar{X}_n = \frac{1}{n} \sum_{i=1}^n X_i \to \mathcal{N}(\mu, \frac{\sigma^2}{n})
+\]</div>
+<p>as <span class="arithmatex">\( n \to \infty \)</span></p>
+<hr/>
+<h2 id="simulation-task">🧪 Simulation Task</h2>
+<ol>
+<li>Choose population distributions:</li>
+<li>Uniform</li>
+<li>Exponential</li>
+<li>
+<p>Binomial</p>
+</li>
+<li>
+<p>Generate a large population dataset for each</p>
+</li>
+<li>
+<p>Sample from the population:</p>
+</li>
+<li>Use sample sizes <span class="arithmatex">\( n = 5, 10, 30, 50 \)</span></li>
+<li>
+<p>Repeat 1000+ times to build a sampling distribution of the sample mean</p>
+</li>
+<li>
+<p>Plot the histograms of sample means and observe the convergence to normality</p>
+</li>
+</ol>
+<hr/>
+<h2 id="parameter-exploration">🔬 Parameter Exploration</h2>
+<ul>
+<li>How does sample size affect convergence to the normal distribution?</li>
+<li>How does the shape of the original distribution influence this behavior?</li>
+<li>What role does variance play?</li>
+</ul>
+<hr/>
+<h2 id="practical-applications">📊 Practical Applications</h2>
+<ul>
+<li>Quality control (e.g. product testing)</li>
+<li>Risk modeling in finance</li>
+<li>Estimating population characteristics from samples</li>
+</ul>
+<hr/>
+<h2 id="deliverables">📦 Deliverables</h2>
+<ul>
+<li>Python script simulating the CLT</li>
+<li>Visualizations showing sampling distribution convergence</li>
+<li>Short analysis summarizing observations</li>
+</ul>
+<hr/>
+<h2 id="python-simulation">💻 Python Simulation</h2>
+<h3 id="sampling-from-a-uniform-distribution">🧪 Sampling from a Uniform Distribution</h3>
+<p>The following histograms show how the sampling distribution of the sample mean becomes more <strong>normal</strong> as the sample size increases:</p>
+<ul>
+<li>Population: Uniform distribution on [0, 1]</li>
+<li>Each subplot shows sample means from 1000 samples</li>
+<li>As <span class="arithmatex">\( n \)</span> increases, the histogram approaches a normal distribution</li>
+</ul>
+<p><img alt="CLT Uniform" src="https://i.imgur.com/cy42HzZ.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href="../../5%20Circuits/Problem_1/" title="Problem 1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-<a class="btn btn-neutral float-right" href="../Problem_2/" title="Problem 2">Next <span class="icon icon-circle-arrow-right"></span></a>
+<a class="btn btn-neutral float-left" href="../../5%20Circuits/Problem_1/" title="Problem 1: Equivalent Resistance Using Graph Theory"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../Problem_2/" title="Problem 2: Estimating \( \pi \) Using Monte Carlo Methods">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>
 <div role="contentinfo">

@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>Problem 1: Measuring Earth’s Gravitational Acceleration with a Pendulum - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "Problem 1: Measuring Earth\u2019s Gravitational Acceleration with a Pendulum";
         var mkdocs_page_input_path = "1 Physics/7 Measurements/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -58,40 +58,72 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_2/">Problem 2: Escape Velocities and Cosmic Velocities</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_3/">Problem 3</a>
+<li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_3/">Problem 3: Trajectories of a Freely Released Payload Near Earth</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">3 Waves</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../3%20Waves/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../3%20Waves/Problem_1/">Problem 1: Interference Patterns on a Water Surface</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">4 Electromagnetism</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../4%20Electromagnetism/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../4%20Electromagnetism/Problem_1/">Problem 1: Simulating the Effects of the Lorentz Force</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">5 Circuits</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../5%20Circuits/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20Circuits/Problem_1/">Problem 1: Equivalent Resistance Using Graph Theory</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">6 Statistics</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_1/">Problem 1: Exploring the Central Limit Theorem through Simulations</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_2/">Problem 2</a>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_2/">Problem 2: Estimating \( \pi \) Using Monte Carlo Methods</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">7 Measurements</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1: Measuring Earth’s Gravitational Acceleration with a Pendulum</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">🎯 Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task">🧪 Task</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#materials">🛠️ Materials</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#procedure">🧰 Procedure</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-setup">1. Setup</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-data-collection">2. Data Collection</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#calculations">🧮 Calculations</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-compute-period">1. Compute Period</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-determine-g">2. Determine \( g \)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-propagate-uncertainty">3. Propagate Uncertainty</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis">📊 Analysis</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deliverables">✅ Deliverables</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#comparing-measurement-with-theoretical-curve">📈 Comparing Measurement with Theoretical Curve</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,7 +195,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">7 Measurements</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">Problem 1: Measuring Earth’s Gravitational Acceleration with a Pendulum</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,11 +203,95 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="problem-1-measuring-earths-gravitational-acceleration-with-a-pendulum">Problem 1: Measuring Earth’s Gravitational Acceleration with a Pendulum</h1>
+<hr/>
+<h2 id="motivation">🎯 Motivation</h2>
+<p>The gravitational acceleration <span class="arithmatex">\( g \)</span> is a universal constant influencing nearly all physical motion. Using a simple pendulum provides a classic way to experimentally determine <span class="arithmatex">\( g \)</span>, while also emphasizing error analysis, measurement uncertainty, and scientific precision.</p>
+<hr/>
+<h2 id="task">🧪 Task</h2>
+<p>Use a pendulum to measure the local gravitational acceleration <span class="arithmatex">\( g \)</span>, and quantify uncertainties in:</p>
+<ul>
+<li>Timing measurements</li>
+<li>Length measurements</li>
+<li>Final calculation of <span class="arithmatex">\( g \)</span></li>
+</ul>
+<hr/>
+<h2 id="materials">🛠️ Materials</h2>
+<ul>
+<li>String (0.5–1.5 m)</li>
+<li>Small mass (e.g., metal nut, coin)</li>
+<li>Stopwatch or timer</li>
+<li>Ruler or measuring tape</li>
+</ul>
+<hr/>
+<h2 id="procedure">🧰 Procedure</h2>
+<h3 id="1-setup">1. Setup</h3>
+<ul>
+<li>Attach the mass to the string and fix the other end</li>
+<li>Measure the length <span class="arithmatex">\( L \)</span> of the pendulum from pivot to center of mass</li>
+<li>Determine uncertainty:<br/>
+<span class="arithmatex">\( \Delta L = \frac{\text{Ruler Resolution}}{2} \)</span></li>
+</ul>
+<hr/>
+<h3 id="2-data-collection">2. Data Collection</h3>
+<ul>
+<li>Displace pendulum (~15°), release gently</li>
+<li>Time 10 oscillations: repeat 10 times  </li>
+<li>
+<p>Calculate mean time:<br/>
+<span class="arithmatex">\( \overline{T_{10}} \)</span>, then<br/>
+<span class="arithmatex">\( \overline{T} = \frac{\overline{T_{10}}}{10} \)</span></p>
+</li>
+<li>
+<p>Uncertainty in <span class="arithmatex">\( \overline{T} \)</span>:<br/>
+<span class="arithmatex">\( \Delta \overline{T} = \frac{s}{\sqrt{n}} \)</span></p>
+</li>
+</ul>
+<hr/>
+<h2 id="calculations">🧮 Calculations</h2>
+<h3 id="1-compute-period">1. Compute Period</h3>
+<div class="arithmatex">\[
+T = \frac{\overline{T_{10}}}{10}
+\]</div>
+<h3 id="2-determine-g">2. Determine <span class="arithmatex">\( g \)</span></h3>
+<div class="arithmatex">\[
+g = \frac{4\pi^2 L}{T^2}
+\]</div>
+<h3 id="3-propagate-uncertainty">3. Propagate Uncertainty</h3>
+<div class="arithmatex">\[
+\Delta g = g \sqrt{ \left( \frac{\Delta T}{T} \right)^2 + \left( \frac{\Delta L}{L} \right)^2 }
+\]</div>
+<hr/>
+<h2 id="analysis">📊 Analysis</h2>
+<ul>
+<li>Compare with accepted <span class="arithmatex">\( g = 9.81 \, \text{m/s}^2 \)</span></li>
+<li>Discuss:</li>
+<li>Impact of timing and length uncertainties</li>
+<li>Accuracy of stopwatch, ruler resolution</li>
+<li>Sources of error (e.g., air drag, angle, string stiffness)</li>
+</ul>
+<hr/>
+<h2 id="deliverables">✅ Deliverables</h2>
+<ul>
+<li>Table of <span class="arithmatex">\( L \)</span>, <span class="arithmatex">\( T \)</span>, <span class="arithmatex">\( \overline{T} \)</span>, <span class="arithmatex">\( s \)</span>, <span class="arithmatex">\( g \)</span>, <span class="arithmatex">\( \Delta g \)</span></li>
+<li>Final value of <span class="arithmatex">\( g \pm \Delta g \)</span></li>
+<li>Discussion of uncertainty and how it impacts conclusions</li>
+</ul>
+<h3 id="comparing-measurement-with-theoretical-curve">📈 Comparing Measurement with Theoretical Curve</h3>
+<p>The plot below compares the <strong>measured pendulum period</strong> (with uncertainty) to the theoretical relationship:</p>
+<div class="arithmatex">\[
+T = 2\pi \sqrt{\frac{L}{g}}
+\]</div>
+<ul>
+<li>✅ The green curve is the theoretical prediction assuming <span class="arithmatex">\( g = 9.81 \, \text{m/s}^2 \)</span></li>
+<li>🔴 The red point is the student's measured value with error bars</li>
+</ul>
+<p>This visual helps verify the consistency of the experiment with Newtonian gravity.</p>
+<p><img alt="Pendulum Period Plot" src="https://i.imgur.com/6n27XHK.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href="../../6%20Statistics/Problem_2/" title="Problem 2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-left" href="../../6%20Statistics/Problem_2/" title="Problem 2: Estimating \( \pi \) Using Monte Carlo Methods"><span class="icon icon-circle-arrow-left"></span> Previous</a>
 <a class="btn btn-neutral float-right" href="../../../2%20Mathematics/1%20Linear_algebra/" title="Linear Algebra">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>

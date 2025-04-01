@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 3 - Physics and Mathematics</title>
+<title>Problem 3: Trajectories of a Freely Released Payload Near Earth - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 3";
+        var mkdocs_page_name = "Problem 3: Trajectories of a Freely Released Payload Near Earth";
         var mkdocs_page_input_path = "1 Physics/2 Gravity/Problem_3.md";
         var mkdocs_page_url = null;
       </script>
@@ -58,41 +58,59 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2: Escape Velocities and Cosmic Velocities</a>
 </li>
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 3</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 3: Trajectories of a Freely Released Payload Near Earth</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#1-motivation">1. Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-theoretical-background">2. Theoretical Background</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#newtons-law-of-universal-gravitation">Newton’s Law of Universal Gravitation:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#energy-based-classification-of-trajectories">Energy-based Classification of Trajectories:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-python-simulation-coming-next">3. Python Simulation (coming next...)</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#simulated-trajectories-of-a-freely-released-payload">🛰️ Simulated Trajectories of a Freely Released Payload</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-applications">4. Applications</a>
+</li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">3 Waves</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../3%20Waves/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../3%20Waves/Problem_1/">Problem 1: Interference Patterns on a Water Surface</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">4 Electromagnetism</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../4%20Electromagnetism/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../4%20Electromagnetism/Problem_1/">Problem 1: Simulating the Effects of the Lorentz Force</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">5 Circuits</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../5%20Circuits/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../5%20Circuits/Problem_1/">Problem 1: Equivalent Resistance Using Graph Theory</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">6 Statistics</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_1/">Problem 1: Exploring the Central Limit Theorem through Simulations</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_2/">Problem 2</a>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_2/">Problem 2: Estimating \( \pi \) Using Monte Carlo Methods</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">7 Measurements</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../7%20Measurements/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../7%20Measurements/Problem_1/">Problem 1: Measuring Earth’s Gravitational Acceleration with a Pendulum</a>
 </li>
 </ul>
 </li>
@@ -163,7 +181,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">2 Gravity</li>
-<li class="breadcrumb-item active">Problem 3</li>
+<li class="breadcrumb-item active">Problem 3: Trajectories of a Freely Released Payload Near Earth</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,12 +189,60 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-3">Problem 3</h1>
+<h1 id="problem-3-trajectories-of-a-freely-released-payload-near-earth">Problem 3: Trajectories of a Freely Released Payload Near Earth</h1>
+<hr/>
+<h2 id="1-motivation">1. Motivation</h2>
+<p>When a payload is released from a moving spacecraft near Earth, its resulting trajectory can vary depending on its initial speed and direction. This includes:</p>
+<ul>
+<li>Suborbital paths (returns to Earth)</li>
+<li>Stable orbits (elliptical or circular)</li>
+<li>Escape trajectories (parabolic or hyperbolic)</li>
+</ul>
+<p>Understanding these trajectories is critical in satellite deployment, interplanetary missions, and re-entry planning.</p>
+<hr/>
+<h2 id="2-theoretical-background">2. Theoretical Background</h2>
+<h3 id="newtons-law-of-universal-gravitation">Newton’s Law of Universal Gravitation:</h3>
+<div class="arithmatex">\[
+F = \frac{GMm}{r^2}
+\]</div>
+<p>Combining this with Newton’s Second Law gives us the equation of motion:</p>
+<div class="arithmatex">\[
+\vec{a} = -\frac{GM}{r^3} \vec{r}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( G \)</span>: Gravitational constant
+- <span class="arithmatex">\( M \)</span>: Mass of the Earth
+- <span class="arithmatex">\( \vec{r} \)</span>: Position vector from Earth’s center
+- <span class="arithmatex">\( \vec{a} \)</span>: Gravitational acceleration acting on the payload</p>
+<hr/>
+<h3 id="energy-based-classification-of-trajectories">Energy-based Classification of Trajectories:</h3>
+<ul>
+<li>If total mechanical energy <span class="arithmatex">\( E &lt; 0 \)</span>: Elliptical orbit</li>
+<li>If <span class="arithmatex">\( E = 0 \)</span>: Parabolic escape</li>
+<li>If <span class="arithmatex">\( E &gt; 0 \)</span>: Hyperbolic escape</li>
+</ul>
+<hr/>
+<h2 id="3-python-simulation-coming-next">3. Python Simulation (coming next...)</h2>
+<h3 id="simulated-trajectories-of-a-freely-released-payload">🛰️ Simulated Trajectories of a Freely Released Payload</h3>
+<p>The following plot shows three possible trajectories of a payload released from a spacecraft near Earth:</p>
+<ul>
+<li><strong>Suborbital:</strong> falls back to Earth</li>
+<li><strong>Circular Orbit:</strong> remains in orbit</li>
+<li><strong>Escape:</strong> exceeds escape velocity and leaves Earth’s gravity</li>
+</ul>
+<p><img alt="Payload Trajectories" src="https://i.imgur.com/dB2lIda.png"/></p>
+<hr/>
+<h2 id="4-applications">4. Applications</h2>
+<p>This analysis helps:
+- Design satellite releases from orbit
+- Plan re-entry paths for capsules
+- Simulate slingshot and escape maneuvers</p>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
 <a class="btn btn-neutral float-left" href="../Problem_2/" title="Problem 2: Escape Velocities and Cosmic Velocities"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-<a class="btn btn-neutral float-right" href="../../3%20Waves/Problem_1/" title="Problem 1">Next <span class="icon icon-circle-arrow-right"></span></a>
+<a class="btn btn-neutral float-right" href="../../3%20Waves/Problem_1/" title="Problem 1: Interference Patterns on a Water Surface">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>
 <div role="contentinfo">
