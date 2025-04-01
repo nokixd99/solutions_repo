@@ -81,6 +81,22 @@ g = \frac{4\pi^2 L}{T^2}
   - Accuracy of stopwatch, ruler resolution
   - Sources of error (e.g., air drag, angle, string stiffness)
 
+### 📈 Comparing Measurement with Theoretical Curve
+
+The plot below compares the **measured pendulum period** (with uncertainty) to the theoretical prediction:
+
+\[
+T = 2\pi \sqrt{\frac{L}{g}}
+\]
+
+- ✅ The green curve represents the expected period as a function of length (assuming \( g = 9.81 \))
+- 🔴 The red point shows the experiment result with error bars
+
+This visual helps validate whether the local \( g \) value is reasonable:
+
+![Pendulum Period Plot](https://i.imgur.com/6n27XHK.png)
+
+
 ---
 
 ## ✅ Deliverables
@@ -88,18 +104,3 @@ g = \frac{4\pi^2 L}{T^2}
 - Table of \( L \), \( T \), \( \overline{T} \), \( s \), \( g \), \( \Delta g \)
 - Final value of \( g \pm \Delta g \)
 - Discussion of uncertainty and how it impacts conclusions
-
-### 📈 Comparing Measurement with Theoretical Curve
-
-The plot below compares the **measured pendulum period** (with uncertainty) to the theoretical relationship:
-
-\[
-T = 2\pi \sqrt{\frac{L}{g}}
-\]
-
-- ✅ The green curve is the theoretical prediction assuming \( g = 9.81 \, \text{m/s}^2 \)
-- 🔴 The red point is the student's measured value with error bars
-
-This visual helps verify the consistency of the experiment with Newtonian gravity.
-
-![Pendulum Period Plot](https://i.imgur.com/6n27XHK.png)
